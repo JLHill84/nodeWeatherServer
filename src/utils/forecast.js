@@ -17,7 +17,9 @@ const forecast = (lat, lng, callback) => {
           body.currently.temperature +
           " degrees, with a " +
           body.currently.precipProbability +
-          "% chance of rain."
+          "% chance of rain and " +
+          body.daily.data[0].humidity * 100 +
+          "% humidity."
       );
     }
   });
